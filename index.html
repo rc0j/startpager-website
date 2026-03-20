@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StartPager | Your New Tab, Redefined.</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              obsidian: "#050505",
+              indigo: {
+                500: "#6366f1",
+                600: "#4f46e5",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-obsidian text-slate-200">
+    <!-- Background Decoration -->
+    <div
+      class="blob top-0 left-0"
+      style="
+        background: radial-gradient(
+          circle,
+          rgba(99, 102, 241, 0.1) 0%,
+          transparent 70%
+        );
+      "
+    ></div>
+    <div
+      class="blob bottom-0 right-0"
+      style="
+        background: radial-gradient(
+          circle,
+          rgba(59, 130, 246, 0.1) 0%,
+          transparent 70%
+        );
+      "
+    ></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
+      <div class="glass px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2 group cursor-pointer">
+          <i
+            data-lucide="rocket"
+            class="text-indigo-500 group-hover:rotate-12 transition-transform"
+          ></i>
+          <span class="font-bold text-xl tracking-tight text-white"
+            >StartPager</span
+          >
+        </div>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#features" class="hover:text-white transition-colors"
+            >Features</a
+          >
+          <a href="#demo" class="hover:text-white transition-colors">Preview</a>
+          <a
+            href="https://github.com/rc0j/StartPager"
+            target="_blank"
+            class="hover:text-white transition-colors"
+            >Open Source</a
+          >
+        </div>
+
+        <a
+          href="https://github.com/rc0j/StartPager/releases"
+          class="hidden md:block bg-white text-obsidian px-5 py-2 rounded-full text-sm font-bold hover:bg-indigo-500 hover:text-white transition-all transform hover:scale-105 active:scale-95"
+        >
+          Download
+        </a>
+
+        <button class="md:hidden text-white" id="menu-btn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative pt-40 pb-20 px-6">
+      <div class="max-w-6xl mx-auto text-center reveal">
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold mb-8 tracking-widest uppercase"
+        >
+          <i data-lucide="zap" class="w-3 h-3"></i>
+          Version 8.0 is here
+        </div>
+
+        <h1
+          class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tight leading-tight text-gradient"
+        >
+          Your New Tab, <br />
+          <span class="text-white">Redefined.</span>
+        </h1>
+
+        <p
+          class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 mb-10 leading-relaxed"
+        >
+          Free open source new-tab replacement that's
+          <span
+            class="text-indigo-400 font-semibold italic"
+            style="font-family: &quot;sans-serif&quot;; font-size: 1.5rem"
+            >ultra fast</span
+          >. Built for power users who value speed and simplicity.
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
+        >
+          <a
+            href="https://github.com/rc0j/StartPager/releases/download/v7.88.1/6a85ba291d39426e8c13-7.88.1.xpi"
+            class="w-full sm:w-auto flex items-center justify-center gap-3 bg-orange-700 hover:bg-orange-800 text-white px-8 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 glow-on-hover"
+          >
+            Get for Firefox
+          </a>
+          <!-- <a href="https://github.com/rc0j/StartPager/releases" class="w-full sm:w-auto flex items-center justify-center gap-3 glass glass-hover px-8 py-4 rounded-2xl font-bold transition-all transform hover:scale-105">
+                    <i data-lucide="chrome"></i>
+                    Get for Chrome (Coming soon)
+                </a> -->
+        </div>
+
+        <!-- Floating Mockup -->
+        <div
+          class="relative max-w-5xl mx-auto reveal"
+          style="perspective: 2000px"
+        >
+          <div class="floating-mockup glass p-1 overflow-hidden">
+            <div
+              class="rounded-xl overflow-hidden bg-obsidian aspect-video flex items-center justify-center group relative"
+            >
+              <img
+                src="./img/Screenshot 2026-03-20 at 10.46.27.png"
+                alt="Tech Background"
+                class="absolute inset-0 w-full h-full object-cover opacity-95 group-hover:opacity-30 transition-opacity"
+              />
+            </div>
+          </div>
+          <!-- Reflection/Glow underneath -->
+          <div
+            class="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[80%] h-20 bg-indigo-500/20 blur-[100px] -z-10"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Features Bento Grid -->
+    <section id="features" class="py-32 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-20 reveal">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Fast by design
+          </h2>
+          <p class="text-slate-400">Everything you need, nothing you don't.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <!-- Performance -->
+          <div class="md:col-span-8 glass p-10 reveal">
+            <div class="flex flex-col h-full justify-between">
+              <div>
+                <div
+                  class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6"
+                >
+                  <i data-lucide="gauge" class="text-indigo-400"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-4">Performance</h3>
+                <p class="text-slate-400 max-w-md mb-8">
+                  Built with speed in mind. StartPager loads in under 100ms,
+                  ensuring your workflow remains uninterrupted.
+                </p>
+              </div>
+              <div class="flex items-end gap-2">
+                <span
+                  class="text-7xl font-bold text-indigo-500 mono"
+                  id="speed-counter"
+                  >0</span
+                >
+                <span
+                  class="text-xl font-bold text-slate-500 pb-3 uppercase tracking-tighter mono"
+                  >ms load time</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Open Source -->
+          <div
+            class="md:col-span-4 glass p-10 reveal bg-gradient-to-br from-indigo-500/5 to-transparent"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="github" class="text-emerald-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">100% Open</h3>
+            <p class="text-slate-400 mb-12">
+              No hidden trackers. No telemetry. Check it out yourself.
+            </p>
+            <a
+              href="https://github.com/rc0j/StartPager"
+              class="text-sm font-bold text-white flex items-center gap-2 hover:translate-x-2 transition-transform"
+            >
+              Explore the code <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Privacy -->
+          <div class="md:col-span-4 glass p-10 reveal">
+            <div
+              class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="shield-check" class="text-amber-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Privacy by Design
+            </h3>
+            <p class="text-slate-400">
+              Your data never leaves your browser. Local storage only.
+            </p>
+          </div>
+
+          <div class="md:col-span-4 glass p-10 reveal">
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="image" class="text-emerald-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Custom background
+            </h3>
+            <p class="text-slate-400">
+              Personalize your experience with a custom background image or with
+              our random button if you're feeling adventurous.
+            </p>
+          </div>
+
+          <div class="md:col-span-4 glass p-10 reveal">
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="keyboard" class="text-emerald-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Keyboard first-approach
+            </h3>
+            <p class="text-slate-400">
+              Navigate to different shortcuts and open your favorite sites
+              without lifting a finger.
+            </p>
+          </div>
+
+          <div class="md:col-span-4 glass p-10 reveal">
+            <div
+              class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6"
+            >
+              <i data-lucide="layers" class="text-indigo-400"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Powerd by
+              <span
+                class="text-indigo-400 font-semibold italic"
+                style="font-family: &quot;sans-serif&quot;; font-size: 1.5rem"
+                >bulma.css</span
+              >
+            </h3>
+            <p class="text-slate-400">
+              StartPager was built using the powerful Bulma CSS framework,
+              ensuring a responsive and visually stunning experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 px-6 border-t border-white/5">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10"
+      >
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <i data-lucide="rocket" class="text-indigo-500"></i>
+            <span class="font-bold text-xl tracking-tight text-white"
+              >StartPager</span
+            >
+          </div>
+          <p class="text-slate-500 text-sm">
+            © 2026 StartPager, created by rc0j. MIT Licensed.
+          </p>
+        </div>
+
+        <div class="flex gap-8">
+          <a
+            href="https://github.com/rc0j/StartPager"
+            class="text-slate-400 hover:text-white transition-colors"
+            >GitHub</a
+          >
+          <a
+            href="https://github.com/rc0j/StartPager/issues"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Issues</a
+          >
+          <a
+            href="https://github.com/rc0j/StartPager/releases"
+            class="text-slate-400 hover:text-white transition-colors"
+            >Releases</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-obsidian z-[60] hidden flex-col items-center justify-center gap-10 p-10"
+    >
+      <button
+        class="absolute top-10 right-10 text-white"
+        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+      >
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <a
+        href="#features"
+        class="text-4xl font-bold text-white"
+        onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+        >Features</a
+      >
+      <a
+        href="https://github.com/rc0j/StartPager"
+        class="text-4xl font-bold text-white"
+        >GitHub</a
+      >
+      <a
+        href="https://github.com/rc0j/StartPager/releases"
+        class="bg-indigo-600 text-white px-10 py-5 rounded-2xl text-2xl font-bold"
+        >Download</a
+      >
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
